@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="CarrinhoBeanService" targetNamespace="http://ejb3.fiap.com.br/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ejb3.fiap.com.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema elementFormDefault="unqualified" targetNamespace="http://ejb3.fiap.com.br/" version="1.0" xmlns:tns="http://ejb3.fiap.com.br/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="ativa" type="tns:ativa" />
+<xs:element name="ativaResponse" type="tns:ativaResponse" />
+<xs:element name="cadastrarItem" type="tns:cadastrarItem" />
+<xs:element name="cadastrarItemResponse" type="tns:cadastrarItemResponse" />
+<xs:element name="inicializa" type="tns:inicializa" />
+<xs:element name="inicializaResponse" type="tns:inicializaResponse" />
+<xs:element name="obterItens" type="tns:obterItens" />
+<xs:element name="obterItensResponse" type="tns:obterItensResponse" />
+<xs:element name="obterQuantidadeItens" type="tns:obterQuantidadeItens" />
+<xs:element name="obterQuantidadeItensResponse" type="tns:obterQuantidadeItensResponse" />
+<xs:element name="passiva" type="tns:passiva" />
+<xs:element name="passivaResponse" type="tns:passivaResponse" />
+<xs:element name="remove" type="tns:remove" />
+<xs:element name="removeResponse" type="tns:removeResponse" />
+<xs:element name="removerCadastro" type="tns:removerCadastro" />
+<xs:element name="removerCadastroResponse" type="tns:removerCadastroResponse" />
+<xs:complexType name="cadastrarItem">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="tns:item" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="item">
+<xs:sequence>
+<xs:element minOccurs="0" name="nome" type="xs:string" />
+<xs:element name="preco" type="xs:double" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="cadastrarItemResponse">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="inicializa">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="inicializaResponse">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="obterItens">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="obterItensResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:item" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="passiva">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="passivaResponse">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="remove">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="removeResponse">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="ativa">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="ativaResponse">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="obterQuantidadeItens">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="obterQuantidadeItensResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="removerCadastro">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="removerCadastroResponse">
+<xs:sequence />
+</xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="removeResponse">
+    <wsdl:part element="tns:removeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="passiva">
+    <wsdl:part element="tns:passiva" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ativaResponse">
+    <wsdl:part element="tns:ativaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obterQuantidadeItensResponse">
+    <wsdl:part element="tns:obterQuantidadeItensResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="remove">
+    <wsdl:part element="tns:remove" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ativa">
+    <wsdl:part element="tns:ativa" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obterQuantidadeItens">
+    <wsdl:part element="tns:obterQuantidadeItens" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="inicializaResponse">
+    <wsdl:part element="tns:inicializaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removerCadastro">
+    <wsdl:part element="tns:removerCadastro" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cadastrarItem">
+    <wsdl:part element="tns:cadastrarItem" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="inicializa">
+    <wsdl:part element="tns:inicializa" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obterItens">
+    <wsdl:part element="tns:obterItens" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obterItensResponse">
+    <wsdl:part element="tns:obterItensResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cadastrarItemResponse">
+    <wsdl:part element="tns:cadastrarItemResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="passivaResponse">
+    <wsdl:part element="tns:passivaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removerCadastroResponse">
+    <wsdl:part element="tns:removerCadastroResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CarrinhoBean">
+    <wsdl:operation name="cadastrarItem">
+      <wsdl:input message="tns:cadastrarItem" name="cadastrarItem">
+    </wsdl:input>
+      <wsdl:output message="tns:cadastrarItemResponse" name="cadastrarItemResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inicializa">
+      <wsdl:input message="tns:inicializa" name="inicializa">
+    </wsdl:input>
+      <wsdl:output message="tns:inicializaResponse" name="inicializaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterItens">
+      <wsdl:input message="tns:obterItens" name="obterItens">
+    </wsdl:input>
+      <wsdl:output message="tns:obterItensResponse" name="obterItensResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="passiva">
+      <wsdl:input message="tns:passiva" name="passiva">
+    </wsdl:input>
+      <wsdl:output message="tns:passivaResponse" name="passivaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="remove">
+      <wsdl:input message="tns:remove" name="remove">
+    </wsdl:input>
+      <wsdl:output message="tns:removeResponse" name="removeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ativa">
+      <wsdl:input message="tns:ativa" name="ativa">
+    </wsdl:input>
+      <wsdl:output message="tns:ativaResponse" name="ativaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterQuantidadeItens">
+      <wsdl:input message="tns:obterQuantidadeItens" name="obterQuantidadeItens">
+    </wsdl:input>
+      <wsdl:output message="tns:obterQuantidadeItensResponse" name="obterQuantidadeItensResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removerCadastro">
+      <wsdl:input message="tns:removerCadastro" name="removerCadastro">
+    </wsdl:input>
+      <wsdl:output message="tns:removerCadastroResponse" name="removerCadastroResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CarrinhoBeanServiceSoapBinding" type="tns:CarrinhoBean">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="cadastrarItem">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="cadastrarItem">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="cadastrarItemResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inicializa">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="inicializa">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="inicializaResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterItens">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="obterItens">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="obterItensResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="passiva">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="passiva">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="passivaResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="remove">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="remove">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="removeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ativa">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="ativa">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ativaResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterQuantidadeItens">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="obterQuantidadeItens">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="obterQuantidadeItensResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removerCadastro">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="removerCadastro">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="removerCadastroResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CarrinhoBeanService">
+    <wsdl:port binding="tns:CarrinhoBeanServiceSoapBinding" name="CarrinhoBeanPort">
+      <soap:address location="http://localhost:8080/AvaliacaoFinal/CarrinhoBean" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

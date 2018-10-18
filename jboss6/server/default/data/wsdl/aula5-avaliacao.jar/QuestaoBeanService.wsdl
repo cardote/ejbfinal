@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="QuestaoBeanService" targetNamespace="http://bean.fiap.com.br/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://bean.fiap.com.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema elementFormDefault="unqualified" targetNamespace="http://bean.fiap.com.br/" version="1.0" xmlns:tns="http://bean.fiap.com.br/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="ativa" type="tns:ativa" />
+<xs:element name="ativaResponse" type="tns:ativaResponse" />
+<xs:element name="inicializa" type="tns:inicializa" />
+<xs:element name="inicializaResponse" type="tns:inicializaResponse" />
+<xs:element name="obterQuestoes" type="tns:obterQuestoes" />
+<xs:element name="obterQuestoesResponse" type="tns:obterQuestoesResponse" />
+<xs:element name="passiva" type="tns:passiva" />
+<xs:element name="passivaResponse" type="tns:passivaResponse" />
+<xs:element name="remove" type="tns:remove" />
+<xs:element name="removeResponse" type="tns:removeResponse" />
+<xs:element name="removerEJB" type="tns:removerEJB" />
+<xs:element name="removerEJBResponse" type="tns:removerEJBResponse" />
+<xs:complexType name="obterQuestoes">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="obterQuestoesResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:anyType" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="removerEJB">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="removerEJBResponse">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="passiva">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="passivaResponse">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="inicializa">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="inicializaResponse">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="ativa">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="ativaResponse">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="remove">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="removeResponse">
+<xs:sequence />
+</xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="obterQuestoesResponse">
+    <wsdl:part element="tns:obterQuestoesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="inicializaResponse">
+    <wsdl:part element="tns:inicializaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removerEJBResponse">
+    <wsdl:part element="tns:removerEJBResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obterQuestoes">
+    <wsdl:part element="tns:obterQuestoes" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removerEJB">
+    <wsdl:part element="tns:removerEJB" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeResponse">
+    <wsdl:part element="tns:removeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="passiva">
+    <wsdl:part element="tns:passiva" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ativaResponse">
+    <wsdl:part element="tns:ativaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="inicializa">
+    <wsdl:part element="tns:inicializa" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="passivaResponse">
+    <wsdl:part element="tns:passivaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ativa">
+    <wsdl:part element="tns:ativa" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="remove">
+    <wsdl:part element="tns:remove" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="QuestaoBean">
+    <wsdl:operation name="obterQuestoes">
+      <wsdl:input message="tns:obterQuestoes" name="obterQuestoes">
+    </wsdl:input>
+      <wsdl:output message="tns:obterQuestoesResponse" name="obterQuestoesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removerEJB">
+      <wsdl:input message="tns:removerEJB" name="removerEJB">
+    </wsdl:input>
+      <wsdl:output message="tns:removerEJBResponse" name="removerEJBResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="passiva">
+      <wsdl:input message="tns:passiva" name="passiva">
+    </wsdl:input>
+      <wsdl:output message="tns:passivaResponse" name="passivaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inicializa">
+      <wsdl:input message="tns:inicializa" name="inicializa">
+    </wsdl:input>
+      <wsdl:output message="tns:inicializaResponse" name="inicializaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ativa">
+      <wsdl:input message="tns:ativa" name="ativa">
+    </wsdl:input>
+      <wsdl:output message="tns:ativaResponse" name="ativaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="remove">
+      <wsdl:input message="tns:remove" name="remove">
+    </wsdl:input>
+      <wsdl:output message="tns:removeResponse" name="removeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QuestaoBeanServiceSoapBinding" type="tns:QuestaoBean">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="obterQuestoes">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="obterQuestoes">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="obterQuestoesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removerEJB">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="removerEJB">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="removerEJBResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="passiva">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="passiva">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="passivaResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inicializa">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="inicializa">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="inicializaResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ativa">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="ativa">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ativaResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="remove">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="remove">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="removeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QuestaoBeanService">
+    <wsdl:port binding="tns:QuestaoBeanServiceSoapBinding" name="QuestaoBeanPort">
+      <soap:address location="http://localhost:8080/aula5-avaliacao/QuestaoBean" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

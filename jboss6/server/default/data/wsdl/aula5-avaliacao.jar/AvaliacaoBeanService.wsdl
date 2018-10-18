@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="AvaliacaoBeanService" targetNamespace="http://bean.fiap.com.br/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://bean.fiap.com.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema elementFormDefault="unqualified" targetNamespace="http://bean.fiap.com.br/" version="1.0" xmlns:tns="http://bean.fiap.com.br/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="obterQuestoes" type="tns:obterQuestoes" />
+<xs:element name="obterQuestoesResponse" type="tns:obterQuestoesResponse" />
+<xs:element name="removerEJB" type="tns:removerEJB" />
+<xs:element name="removerEJBResponse" type="tns:removerEJBResponse" />
+<xs:complexType name="obterQuestoes">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="obterQuestoesResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:questao" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="questao">
+<xs:sequence>
+<xs:element minOccurs="0" name="codigoAvaliacao" type="xs:int" />
+<xs:element minOccurs="0" name="descricao" type="xs:string" />
+<xs:element minOccurs="0" name="id" type="xs:int" />
+<xs:element minOccurs="0" name="respostaSelecionada" type="tns:resposta" />
+<xs:element maxOccurs="unbounded" minOccurs="0" name="respostas" nillable="true" type="xs:anyType" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="resposta">
+<xs:sequence>
+<xs:element minOccurs="0" name="descricao" type="xs:string" />
+<xs:element name="id" type="xs:int" />
+<xs:element minOccurs="0" name="questao" type="tns:questao" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="removerEJB">
+<xs:sequence />
+</xs:complexType>
+<xs:complexType name="removerEJBResponse">
+<xs:sequence />
+</xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="obterQuestoesResponse">
+    <wsdl:part element="tns:obterQuestoesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removerEJBResponse">
+    <wsdl:part element="tns:removerEJBResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obterQuestoes">
+    <wsdl:part element="tns:obterQuestoes" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removerEJB">
+    <wsdl:part element="tns:removerEJB" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AvaliacaoBean">
+    <wsdl:operation name="obterQuestoes">
+      <wsdl:input message="tns:obterQuestoes" name="obterQuestoes">
+    </wsdl:input>
+      <wsdl:output message="tns:obterQuestoesResponse" name="obterQuestoesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removerEJB">
+      <wsdl:input message="tns:removerEJB" name="removerEJB">
+    </wsdl:input>
+      <wsdl:output message="tns:removerEJBResponse" name="removerEJBResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AvaliacaoBeanServiceSoapBinding" type="tns:AvaliacaoBean">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="obterQuestoes">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="obterQuestoes">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="obterQuestoesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removerEJB">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="removerEJB">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="removerEJBResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AvaliacaoBeanService">
+    <wsdl:port binding="tns:AvaliacaoBeanServiceSoapBinding" name="AvaliacaoBeanPort">
+      <soap:address location="http://localhost:8080/aula5-avaliacao/AvaliacaoBean" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
